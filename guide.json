@@ -1,0 +1,105 @@
+{
+  "owner": "JUTZUGC",
+  "code": "JUTZUGC",
+  "project": {
+    "key": "anydoc",
+    "nameCn": "AnyDoc",
+    "repoName": "anydoc-deploy-guide",
+    "oneLiner": "23.1k stars，MIT，firecrawl 出品的文档转 Markdown 工具，预编译二进制零依赖",
+    "officialRepo": "https://github.com/firecrawl/anydoc",
+    "officialDocs": "https://github.com/firecrawl/anydoc#usage",
+    "stars": "23.1k",
+    "license": "MIT",
+    "highlights": [
+      "23.1k stars：firecrawl 出品，2026-08 建仓",
+      "格式全：docx、pptx、xlsx、odt、rtf、epub、csv、pdf",
+      "Rust 实现：预编译二进制，无需 Office",
+      "三种入口：CLI、Node 包、Python 绑定",
+      "支持 stdin/stdout：方便接管道",
+      "MIT：可商用"
+    ],
+    "mcpSupport": "AnyDoc 不是 MCP server；可通过 `npx skills add firecrawl/anydoc` 装成 Agent 技能，本仓库不注册 MCP。",
+    "webuiUrl": "",
+    "adapterPorts": "",
+    "collectedAt": "2026-10-27",
+    "verification": [
+      [
+        "npm 包 @firecrawl/anydoc 最新版 0.2.4，bin 为 anydoc",
+        "已核对 2026-10-27"
+      ],
+      [
+        "仓库元数据已核对：23.1k stars、MIT、2026-08 建仓",
+        "已核对 2026-10-27"
+      ],
+      [
+        "README 确认 npx / 全局安装 / skills 三种用法",
+        "已核对 2026-10-27"
+      ],
+      [
+        "未实测文档转换",
+        "说明 2026-10-27"
+      ]
+    ],
+    "deploy": {
+      "type": "script",
+      "requires": [
+        "node"
+      ],
+      "steps": [
+        "npm install -g @firecrawl/anydoc",
+        "anydoc --help | head -n 20",
+        "echo '安装完成：anydoc report.docx -o report.md'"
+      ],
+      "stepsPs": [
+        "npm.cmd install -g @firecrawl/anydoc",
+        "anydoc --help",
+        "Write-Host '安装完成：anydoc report.docx -o report.md'"
+      ],
+      "source": "https://github.com/firecrawl/anydoc#usage"
+    },
+    "pitfalls": [
+      "首次运行慢：正在下载预编译二进制",
+      "命令找不到：确认 npm 全局 bin 在 PATH",
+      "扫描 PDF 输出空：加 `--ocr hosted` 并配 Key",
+      "中文乱码：源文件编码有问题，先另存 UTF-8",
+      "表格错位：复杂表格转完要人工校对",
+      "离线环境：提前缓存二进制或改用 Node 绑定"
+    ]
+  },
+  "gate": {
+    "allow": [
+      "dumate"
+    ],
+    "label": "百度搭子",
+    "url": "https://www.dumate.cn/",
+    "guideUrl": "https://github.com/JUTZUGC/anydoc-deploy-guide",
+    "howToFix": [
+      "1. 打开 https://www.dumate.cn/ ，下载并安装「百度搭子」电脑端（Windows / macOS）",
+      "2. 用账号登录",
+      "3. 在对话窗口发送：你好，帮我从 github 部署 JUTZUGC/anydoc-deploy-guide 到我的电脑上",
+      "4. 部署完成后，在同一对话窗口里继续使用"
+    ],
+    "hint": "请改用「百度搭子」部署后再使用；本工具没有网页版入口。",
+    "onError": "allow"
+  },
+  "keywords": [
+    "AnyDoc 部署",
+    "AnyDoc 安装",
+    "文档 转 Markdown",
+    "PDF 转 Markdown",
+    "Word 转 Markdown",
+    "PPT 转 Markdown",
+    "firecrawl anydoc",
+    "Rust 文档转换",
+    "AnyDoc 中文",
+    "离线 文档 转换"
+  ],
+  "topics": [
+    "markdown",
+    "document-converter",
+    "rust",
+    "pdf",
+    "cli",
+    "firecrawl"
+  ]
+}
